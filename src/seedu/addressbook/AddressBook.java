@@ -1058,7 +1058,7 @@ public class AddressBook {
      * @param phone to be validated
      */
     private static boolean isPersonPhoneValid(String phone) {
-        return phone.matches("\\d+");    // phone nonempty sequence of digits
+        return phone.matches("\\d{8}");    // phone sequence of exactly 8 digits (assume local numbers)
         //TODO: implement a more permissive validation
     }
 
