@@ -957,10 +957,20 @@ public class AddressBook {
     private static boolean isPersonDataExtractableFrom(String personData) {
         final String matchAnyPersonDataPrefix = PERSON_DATA_PREFIX_PHONE + '|' + PERSON_DATA_PREFIX_EMAIL;
         final String[] splitArgs = personData.trim().split(matchAnyPersonDataPrefix);
-        return splitArgs.length == 3 // 3 arguments
-                && !splitArgs[0].isEmpty() // non-empty arguments
-                && !splitArgs[1].isEmpty()
-                && !splitArgs[2].isEmpty();
+        return personDataIsExtractable(splitArgs);
+    }
+
+    /**
+     * Returns true if Returns true if person data (email, name, phone etc) can be extracted from the argument string.
+     * Auxiliary function for isPersonDataExtractableFrom method
+     *
+     * @param splitArgs the data to check
+     */
+    private static boolean personDataIsExtractable(String[] dataToCheck) {
+        return dataToCheck.length == 3 // 3 arguments
+                && !dataToCheck[0].isEmpty() // non-empty arguments
+                && !dataToCheck[1].isEmpty()
+                && !dataToCheck[2].isEmpty();
     }
 
     /**
