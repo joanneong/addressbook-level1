@@ -55,9 +55,9 @@
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
-|| find: Finds all persons whose names contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers.
+|| find: Finds all persons whose names or emails contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers.
 || 	Parameters: KEYWORD [MORE_KEYWORDS]
-|| 	Example: find alice bob charlie
+|| 	Example: find alice bob charlie findme@gmail.com
 || 
 || list: Displays all persons as a list with index numbers.
 || 	Example: list
@@ -179,6 +179,10 @@
 || 
 || 0 persons found!
 || ===================================================
+|| Enter command: || [Command entered:  find benchoo@nus]
+|| 
+|| 0 persons found!
+|| ===================================================
 || Enter command: || [Command entered:  find 23912039120]
 || 
 || 0 persons found!
@@ -187,7 +191,16 @@
 || 
 || 0 persons found!
 || ===================================================
+|| Enter command: || [Command entered:  find BENCHOO@nus.edu.sg]
+|| 
+|| 0 persons found!
+|| ===================================================
 || Enter command: || [Command entered:  find Betsy]
+|| 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 
+|| 1 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  find benchoo@nus.edu.sg]
 || 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 
 || 1 persons found!
