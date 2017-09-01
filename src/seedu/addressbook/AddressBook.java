@@ -957,7 +957,7 @@ public class AddressBook {
     private static boolean isPersonDataExtractableFrom(String personData) {
         final String matchAnyPersonDataPrefix = PERSON_DATA_PREFIX_PHONE + '|' + PERSON_DATA_PREFIX_EMAIL;
         final String[] splitArgs = personData.trim().split(matchAnyPersonDataPrefix);
-        return personDataIsExtractable(splitArgs);
+        return isPersonDataExtractable(splitArgs);
     }
 
     /**
@@ -966,7 +966,7 @@ public class AddressBook {
      *
      * @param splitArgs the data to check
      */
-    private static boolean personDataIsExtractable(String[] dataToCheck) {
+    private static boolean isPersonDataExtractable(String[] dataToCheck) {
         return dataToCheck.length == 3 // 3 arguments
                 && !dataToCheck[0].isEmpty() // non-empty arguments
                 && !dataToCheck[1].isEmpty()
